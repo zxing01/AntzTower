@@ -1,0 +1,18 @@
+ 	
+	embedXcode
+	embedXcode+
+	----------------------------------
+	Embedded Computing on Xcode
+	
+	
+	© Rei VILO, 2010-2015
+	All rights reserved	
+	http://embedXcode.weebly.com/
+	
+	
+embedXcode  • Feb 02, 2015 release 261 • Local library files potential issue fixed
+embedXcode+ • Feb 02, 2015 release 261 • Local library files potential issue fixed
+embedXcode Tools • Jan 08, 2015 release 250 • Updated pre-compiled frameworks
+
+	
+	
