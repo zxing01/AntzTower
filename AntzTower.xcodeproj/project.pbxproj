@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3D6335121AD49AD500D64F77 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D6335111AD49AD500D64F77 /* main.cpp */; };
 		3D6335141AD49AD500D64F77 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 3D6335131AD49AD500D64F77 /* Makefile */; };
-		3D6335171AD49AD500D64F77 /* LocalLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D6335161AD49AD500D64F77 /* LocalLibrary.cpp */; };
+		3D63358E1AD49B2100D64F77 /* Sender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D63358C1AD49B2100D64F77 /* Sender.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,8 +17,6 @@
 		3D6335111AD49AD500D64F77 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3D6335131AD49AD500D64F77 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		3D6335151AD49AD500D64F77 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
-		3D6335161AD49AD500D64F77 /* LocalLibrary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LocalLibrary.cpp; sourceTree = "<group>"; };
-		3D6335181AD49AD500D64F77 /* LocalLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalLibrary.h; sourceTree = "<group>"; };
 		3D63351A1AD49AD500D64F77 /* Sketchbook.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = Sketchbook.txt; path = Sketchbook/Sketchbook.txt; sourceTree = "<group>"; };
 		3D63351C1AD49AD500D64F77 /* 4D Systems PICadillo 35T.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "4D Systems PICadillo 35T.xcconfig"; path = "Configurations/4D Systems PICadillo 35T.xcconfig"; sourceTree = "<group>"; };
 		3D63351D1AD49AD500D64F77 /* Adafruit Pro Trinket 3V-12MHz.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Adafruit Pro Trinket 3V-12MHz.xcconfig"; path = "Configurations/Adafruit Pro Trinket 3V-12MHz.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +106,9 @@
 		3D6335741AD49AD500D64F77 /* TemplateIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TemplateIcon.icns; path = Utilities/TemplateIcon.icns; sourceTree = "<group>"; };
 		3D6335751AD49AD500D64F77 /* uploader_izmir.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = uploader_izmir.sh; path = Utilities/uploader_izmir.sh; sourceTree = "<group>"; };
 		3D6335761AD49AD500D64F77 /* AntzTower.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = AntzTower.ino; sourceTree = "<group>"; };
+		3D63358B1AD49B2100D64F77 /* Communication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Communication.h; sourceTree = "<group>"; };
+		3D63358C1AD49B2100D64F77 /* Sender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sender.cpp; sourceTree = "<group>"; };
+		3D63358D1AD49B2100D64F77 /* Sender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sender.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -131,10 +132,11 @@
 			isa = PBXGroup;
 			children = (
 				3D6335111AD49AD500D64F77 /* main.cpp */,
+				3D63358B1AD49B2100D64F77 /* Communication.h */,
+				3D63358C1AD49B2100D64F77 /* Sender.cpp */,
+				3D63358D1AD49B2100D64F77 /* Sender.h */,
 				3D6335131AD49AD500D64F77 /* Makefile */,
 				3D6335151AD49AD500D64F77 /* ReadMe.txt */,
-				3D6335161AD49AD500D64F77 /* LocalLibrary.cpp */,
-				3D6335181AD49AD500D64F77 /* LocalLibrary.h */,
 				3D6335761AD49AD500D64F77 /* AntzTower.ino */,
 				3D6335191AD49AD500D64F77 /* Sketchbook */,
 				3D63351B1AD49AD500D64F77 /* Configurations */,
@@ -410,9 +412,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D63358E1AD49B2100D64F77 /* Sender.cpp in Sources */,
 				3D6335141AD49AD500D64F77 /* Makefile in Sources */,
 				3D6335121AD49AD500D64F77 /* main.cpp in Sources */,
-				3D6335171AD49AD500D64F77 /* LocalLibrary.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +504,7 @@
 		3D63357A1AD49AD500D64F77 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BOARD_PORT = "/dev/tty.usbmodem*";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
