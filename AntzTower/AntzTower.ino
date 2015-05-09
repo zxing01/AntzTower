@@ -29,8 +29,7 @@ void setup() {
 
 ////////////////////////////////////////////////////////////////
 void loop() {
-    sender.send1(1, 5000);
-    delay(1000);
-    sender.send2(2, 5000);
-    delay(1000);
+    sender.send1(0x01FF, 500);
+    sender.send2(0x02FF, 500);
+    //delay(100);
 }
